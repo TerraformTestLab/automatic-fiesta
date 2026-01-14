@@ -1,13 +1,13 @@
 terraform {
   required_version = ">= 1.0"
-  cloud { 
-    
-    organization = "SujaysTerraformLab" 
+  cloud {
 
-    workspaces { 
-      name = "automatic-fiesta" 
-    } 
-  } 
+    organization = "SujaysTerraformLab"
+
+    workspaces {
+      name = "automatic-fiesta"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -71,7 +71,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "main" {
 
 # Block public access to the S3 bucket
 resource "aws_s3_bucket_public_access_block" "main" {
-  bucket = aws_s3_bucket.main.id
+  bucket                  = aws_s3_bucket.main.id
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
