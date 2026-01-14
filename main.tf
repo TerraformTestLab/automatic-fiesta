@@ -25,8 +25,7 @@ provider "doormat" {}
 
 data "doormat_aws_credentials" "creds" {
   provider = doormat
-
-  role_arn = "arn:aws:iam::886363944443:role/sample_dev-custom_role"
+  role_arn = "arn:aws:iam::668081019392:role/aws_sujay.samanta_test-developer"
 }
 
 # Configure the AWS Provider
